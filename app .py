@@ -41,22 +41,22 @@ def obtener_monetario():
 # ============ PIB ============
 @st.cache_data(ttl=600)
 def obtener_pib():
-    return pd.read_csv("/Users/pc/Desktop/pib.csv")
+    return pd.read_csv("Desktop/pib.csv")
 
 @st.cache_data(ttl=600)
 def obtener_sectores():
-    return pd.read_csv("/Users/pc/Desktop/sectores.csv")
+    return pd.read_csv("Desktop/sectores.csv")
 
 # ============ TASAS ============
 @st.cache_data(ttl=600)
 def obtener_tasas_activas():
-    df = pd.read_csv("/Users/pc/Desktop/tasas_activas.csv")
+    df = pd.read_csv("Desktop/tasas_activas.csv")
     df['fecha'] = pd.to_datetime(df['fecha'])
     return df
 
 @st.cache_data(ttl=600)
 def obtener_tasas_pasivas():
-    df = pd.read_csv("/Users/pc/Desktop/tasas_pasivas.csv")
+    df = pd.read_csv("Desktop/tasas_pasivas.csv")
     df['fecha'] = pd.to_datetime(df['fecha'])
     return df
 
