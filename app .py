@@ -27,14 +27,14 @@ def obtener_cambiario():
 # ============ INFLACION ============
 @st.cache_data(ttl=600)
 def obtener_inflacion():
-    df = pd.read_csv("/Users/pc/Desktop/inflacion.csv")
+    df = pd.read_csv("inflacion.csv")
     df['fecha'] = pd.to_datetime(df['fecha'])
     return df
 
 # ============ MONETARIO ============
 @st.cache_data(ttl=600)
 def obtener_monetario():
-    df = pd.read_csv("/Users/pc/Desktop/monetario.csv")
+    df = pd.read_csv("monetario.csv")
     df['fecha'] = pd.to_datetime(df['fecha'])
     return df
 
